@@ -1,15 +1,15 @@
-import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
 import { TailwindProvider } from "tailwind-rn";
 import utilities from "./tailwind.json";
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./navigator/RootNavigator";
 
 const App = () => {
   return (
     // @ts-ignore - TailwindProvider is missing Type Definition
     <TailwindProvider utilities={utilities}>
-      <View>
-        <StatusBar style="auto" />
-      </View>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
     </TailwindProvider>
   );
 };
