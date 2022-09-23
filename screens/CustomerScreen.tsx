@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { ScrollView, ActivityIndicator } from "react-native";
 import {
@@ -10,7 +10,7 @@ import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import { TabStackParamList } from "../navigator/TabNavigator";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack/lib/typescript/src/types";
 import { RootStackParamsList } from "../navigator/RootNavigator";
-import { Image } from "@rneui/themed";
+import { Image, Input } from "@rneui/themed";
 
 export type CustomerScreenNavigationProps = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList, "Customers">,
@@ -18,6 +18,7 @@ export type CustomerScreenNavigationProps = CompositeNavigationProp<
 >;
 
 const CustomerScreen = () => {
+  const [input, setInput] = useState<string>("");
   const tailwind = useTailwind();
   const navigation = useNavigation<CustomerScreenNavigationProps>();
 
@@ -32,6 +33,12 @@ const CustomerScreen = () => {
         source={{ uri: "https://links.papareact.com/3jc" }}
         containerStyle={tailwind("w-full h-64")}
         PlaceholderContent={<ActivityIndicator />}
+      />
+      <Input
+        placeholder="Search by Customer"
+        value={input}
+        onChangeText={setInput}
+        containerStyle={tailwind("bg-white pt-5 pb-0 px-10")}
       />
     </ScrollView>
   );
