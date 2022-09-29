@@ -2,14 +2,22 @@ import { TailwindProvider } from "tailwind-rn";
 import utilities from "./tailwind.json";
 import { NavigationContainer } from "@react-navigation/native";
 import RootNavigator from "./navigator/RootNavigator";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: "http://localhost:5000/api/unrealized-panther",
+  cache: new InMemoryCache(),
+});
 
 const App = () => {
   return (
     // @ts-ignore - TailwindProvider is missing Type Definition
     <TailwindProvider utilities={utilities}>
-      <NavigationContainer>
-        <RootNavigator />
-      </NavigationContainer>
+      <ApolloProvider client={client}>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+      </ApolloProvider>
     </TailwindProvider>
   );
 };
