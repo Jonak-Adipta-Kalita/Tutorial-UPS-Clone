@@ -19,6 +19,21 @@
 			"position": "relative"
 		}
 	},
+	"right-5": {
+		"style": {
+			"right": 20
+		}
+	},
+	"top-5": {
+		"style": {
+			"top": 20
+		}
+	},
+	"z-10": {
+		"style": {
+			"zIndex": 10
+		}
+	},
 	"ml-auto": {
 		"style": {
 			"marginLeft": "auto"
@@ -27,6 +42,21 @@
 	"mb-5": {
 		"style": {
 			"marginBottom": 20
+		}
+	},
+	"mt-5": {
+		"style": {
+			"marginTop": 20
+		}
+	},
+	"mt-2": {
+		"style": {
+			"marginTop": 8
+		}
+	},
+	"mt-4": {
+		"style": {
+			"marginTop": 16
 		}
 	},
 	"block": {

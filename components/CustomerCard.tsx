@@ -20,7 +20,9 @@ const CustomerCard = ({
   const navigation = useNavigation<CustomerScreenNavigationProps>();
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => navigation.navigate("MyModal", { name, userId })}
+    >
       <Card containerStyle={tailwind("p-5 rounded-lg")}>
         <View>
           <View style={tailwind("flex-row justify-between")}>
