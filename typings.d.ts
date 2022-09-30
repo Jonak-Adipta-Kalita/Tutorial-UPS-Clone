@@ -8,4 +8,36 @@ type CustomerList = {
   value: Customer;
 };
 
-interface Order {}
+type TrackingItems = {
+  customer_id: ID;
+  custmer: Customer;
+  items: Item[];
+};
+
+type Item = {
+  item_id: ID;
+  name: string;
+  price: number;
+  quantity: number;
+};
+
+type OrderResponse = {
+  value: Order;
+};
+
+type CustomerResponse = {
+  name: ID;
+  value: Customer;
+};
+
+type Order = {
+  carrier: string;
+  createdAt: string;
+  shippingCost: number;
+  trackingId: number;
+  trackingItems: TrackingItems;
+  lat: number;
+  lng: number;
+  Address: string;
+  City: string;
+};
