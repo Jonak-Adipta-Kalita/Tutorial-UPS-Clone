@@ -59,7 +59,7 @@ const ModalScreen = () => {
       <FlatList
         contentContainerStyle={tailwind("pb-[200px]")}
         data={orders}
-        keyExtractor={(order) => order.trackingId.toString()}
+        keyExtractor={(order) => order.trackingId}
         renderItem={({ item: order }) => <DeliveryCard order={order} />}
       />
     </View>
