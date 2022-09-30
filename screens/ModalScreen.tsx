@@ -36,20 +36,28 @@ const ModalScreen = () => {
   }, [navigation]);
 
   return (
-    <View style={tailwind("mt-4")}>
+    <View>
       <TouchableOpacity
-        style={tailwind("absolute right-5 top-5 z-10")}
+        style={tailwind("absolute right-5 top-5 z-10 mt-4")}
         onPress={() => navigation.goBack()}
       >
         <Icon name="closecircle" type="antdesign" />
       </TouchableOpacity>
-      <View>
-        <View>
-          <Text>{name}</Text>
-          <Text>Deliveries</Text>
+      <View style={tailwind("mt-10")}>
+        <View style={[tailwind("py-5 border-b"), { borderColor: "#59C1CC" }]}>
+          <Text
+            style={[
+              tailwind("text-center text-xl font-bold"),
+              { color: "#59C1CC" },
+            ]}
+          >
+            {name}
+          </Text>
+          <Text style={tailwind("text-center italic text-sm")}>Deliveries</Text>
         </View>
       </View>
       <FlatList
+        contentContainerStyle={tailwind("pb-[200px]")}
         data={orders}
         keyExtractor={(order) => order.trackingId.toString()}
         renderItem={({ item: order }) => <DeliveryCard order={order} />}

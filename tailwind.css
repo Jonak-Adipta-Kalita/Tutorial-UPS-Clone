@@ -22,8 +22,30 @@
   top: 1.25rem
 }
 
+.top-6 {
+  top: 1.5rem
+}
+
+.top-\[1\.25rem\] {
+  top: 1.25rem
+}
+
 .z-10 {
   z-index: 10
+}
+
+.m-5 {
+  margin: 1.25rem
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto
 }
 
 .ml-auto {
@@ -44,6 +66,14 @@
 
 .mt-4 {
   margin-top: 1rem
+}
+
+.mt-10 {
+  margin-top: 2.5rem
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem
 }
 
 .block {
@@ -94,18 +124,36 @@
   border-width: 1px
 }
 
+.border-b {
+  border-bottom-width: 1px
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.bg-\[\#59C1CC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(89 193 204 / var(--tw-bg-opacity))
 }
 
 .p-5 {
   padding: 1.25rem
 }
 
+.p-\[0px\] {
+  padding: 0px
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem
 }
 
 .pt-5 {
@@ -116,6 +164,18 @@
   padding-bottom: 0px
 }
 
+.pb-\[200px\] {
+  padding-bottom: 200px
+}
+
+.pt-\[16px\] {
+  padding-top: 16px
+}
+
+.text-center {
+  text-align: center
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem
@@ -124,6 +184,26 @@
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem
 }
 
 .font-bold {
@@ -138,7 +218,16 @@
   text-transform: capitalize
 }
 
+.italic {
+  font-style: italic
+}
+
 .text-\[\#59C1CC\] {
   --tw-text-opacity: 1;
   color: rgb(89 193 204 / var(--tw-text-opacity))
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
 }
