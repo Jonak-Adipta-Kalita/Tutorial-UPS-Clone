@@ -5,7 +5,7 @@ import RootNavigator from "./navigator/RootNavigator";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/api/unrealized-panther",
+  uri: "http://localhost:5001/api/unrealized-panther",
   cache: new InMemoryCache(),
 });
 
