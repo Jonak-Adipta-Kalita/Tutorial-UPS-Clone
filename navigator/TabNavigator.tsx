@@ -38,7 +38,7 @@ const TabNavigator = () => {
               <Icon
                 name="box"
                 type="entypo"
-                color={focused ? "EB6A7C" : "gray"}
+                color={focused ? "#EB6A7C" : "gray"}
               />
             );
           }
