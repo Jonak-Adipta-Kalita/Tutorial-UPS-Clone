@@ -36,8 +36,8 @@ type Order = {
   shippingCost: number;
   trackingId: string;
   trackingItems: TrackingItems;
-  lat: number;
-  lng: number;
+  Lat: number;
+  Lng: number;
   Address: string;
   City: string;
 };

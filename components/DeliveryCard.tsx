@@ -2,6 +2,7 @@ import React from "react";
 import { useTailwind } from "tailwind-rn/dist";
 import { Card, Divider, Icon } from "@rneui/themed";
 import { Text, View } from "react-native";
+import MapView, { Marker } from "react-native-maps";
 
 const DeliveryCard = ({ order }: { order: Order }) => {
   const tailwind = useTailwind();
@@ -60,6 +61,24 @@ const DeliveryCard = ({ order }: { order: Order }) => {
           </View>
         ))}
       </View>
+      <MapView
+        initialRegion={{
+          latitude: order.Lat,
+          longitude: order.Lng,
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
+        }}
+        style={tailwind("w-full h-[200px]")}
+      >
+        {order.Lat && order.Lng && (
+          <Marker
+            coordinate={{ latitude: order.Lat, longitude: order.Lng }}
+            title="Delivery Location"
+            description={order.Address}
+            identifier="destination"
+          />
+        )}
+      </MapView>
     </Card>
   );
 };

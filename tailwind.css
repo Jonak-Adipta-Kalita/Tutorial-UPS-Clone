@@ -22,14 +22,6 @@
   top: 1.25rem
 }
 
-.top-6 {
-  top: 1.5rem
-}
-
-.top-\[1\.25rem\] {
-  top: 1.25rem
-}
-
 .z-10 {
   z-index: 10
 }
@@ -48,20 +40,12 @@
   margin-right: auto
 }
 
-.ml-auto {
-  margin-left: auto
-}
-
 .mb-5 {
   margin-bottom: 1.25rem
 }
 
-.mt-5 {
-  margin-top: 1.25rem
-}
-
-.mt-2 {
-  margin-top: 0.5rem
+.ml-auto {
+  margin-left: auto
 }
 
 .mt-4 {
@@ -72,8 +56,12 @@
   margin-top: 2.5rem
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem
+.-mt-3 {
+  margin-top: -0.75rem
+}
+
+.mb-4 {
+  margin-bottom: 1rem
 }
 
 .block {
@@ -96,12 +84,24 @@
   height: 16rem
 }
 
+.h-\[200px\] {
+  height: 200px
+}
+
 .w-full {
   width: 100%
 }
 
+.flex-grow {
+  flex-grow: 1
+}
+
 .flex-row {
   flex-direction: row
+}
+
+.items-start {
+  align-items: flex-start
 }
 
 .items-center {
@@ -128,14 +128,14 @@
   border-bottom-width: 1px
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-}
-
 .bg-\[\#59C1CC\] {
   --tw-bg-opacity: 1;
   background-color: rgb(89 193 204 / var(--tw-bg-opacity))
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
 .p-5 {
@@ -156,6 +156,10 @@
   padding-bottom: 1.25rem
 }
 
+.pt-\[16px\] {
+  padding-top: 16px
+}
+
 .pt-5 {
   padding-top: 1.25rem
 }
@@ -166,10 +170,6 @@
 
 .pb-\[200px\] {
   padding-bottom: 200px
-}
-
-.pt-\[16px\] {
-  padding-top: 16px
 }
 
 .text-center {
@@ -186,11 +186,6 @@
   line-height: 1.25rem
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem
-}
-
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem
@@ -204,6 +199,11 @@
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
 }
 
 .font-bold {
