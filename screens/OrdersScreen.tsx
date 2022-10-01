@@ -61,7 +61,7 @@ const OrdersScreen = () => {
               return new Date(a.createdAt) < new Date(b.createdAt) ? 1 : -1;
             }
           })
-          .map((order) => (
+          ?.map((order) => (
             <OrderCard key={order.trackingId} order={order} />
           ))}
       </View>

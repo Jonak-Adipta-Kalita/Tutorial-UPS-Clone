@@ -17,20 +17,20 @@ const OrderCard = ({ order }: { order: Order }) => {
               color="#EB6A7C"
             />
             <Text style={{ fontSize: 10 }}>
-              {new Date(order.createdAt).toDateString()}
+              {new Date(order?.createdAt).toDateString()}
             </Text>
           </View>
           <View>
             <Text style={[tailwind("text-gray-400"), { fontSize: 10 }]}>
-              {order.carrier}-{order.trackingId}
+              {order?.carrier}-{order?.trackingId}
             </Text>
             <Text style={tailwind("text-gray-500 text-xl")}>
-              {order.trackingItems.custmer.name}
+              {order?.trackingItems?.customer?.name}
             </Text>
           </View>
           <View style={tailwind("flex-row items-center")}>
             <Text style={[tailwind("text-sm"), { color: "#EB6A7C" }]}>
-              {order.trackingItems.items.length}x
+              {order?.trackingItems?.items?.length}x
             </Text>
             <Icon style={tailwind("ml-2")} name="box" type="feather" />
           </View>
