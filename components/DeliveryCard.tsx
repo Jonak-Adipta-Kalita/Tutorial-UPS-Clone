@@ -88,7 +88,7 @@ const DeliveryCard = ({
           style={[
             tailwind("w-full"),
             { flexGrow: 1 },
-            !fullWidth && { height: 200 },
+            !fullWidth ? { height: 200 } : { height: 410 },
           ]}
         >
           {order.Lat && order.Lng && (
