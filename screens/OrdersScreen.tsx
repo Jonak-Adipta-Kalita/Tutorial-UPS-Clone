@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, ScrollView, ActivityIndicator, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import React, { useLayoutEffect, useState } from "react";
 import {
@@ -11,6 +11,8 @@ import { TabStackParamList } from "../navigator/TabNavigator";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack/lib/typescript/src/types";
 import { useTailwind } from "tailwind-rn/dist";
 import useOrders from "../hooks/useOrders";
+import { Button, Image } from "@rneui/themed";
+import OrderCard from "../components/OrderCard";
 
 export type OrderScreenNavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList, "Orders">,
@@ -35,9 +37,35 @@ const OrdersScreen = () => {
   }, [navigation]);
 
   return (
-    <View>
+    <ScrollView style={{ backgroundColor: "#EB6A7C" }}>
       <StatusBar style="auto" />
-    </View>
+      <Image
+        source={{ uri: "https://links.papareact.com/m51" }}
+        containerStyle={tailwind("w-full h-64")}
+        PlaceholderContent={<ActivityIndicator />}
+      />
+      <View>
+        <Button
+          onPress={() => setAscending(!ascending)}
+          color="pink"
+          titleStyle={{ color: "gray", fontWeight: "400" }}
+          style={tailwind("py-2 px-5")}
+        >
+          Showing: {ascending ? "Oldest" : "Most Recent"} First
+        </Button>
+        {orders
+          ?.sort((a, b) => {
+            if (ascending) {
+              return new Date(a.createdAt) > new Date(b.createdAt) ? 1 : -1;
+            } else {
+              return new Date(a.createdAt) < new Date(b.createdAt) ? 1 : -1;
+            }
+          })
+          .map((order) => (
+            <OrderCard key={order.trackingId} order={order} />
+          ))}
+      </View>
+    </ScrollView>
   );
 };
 
