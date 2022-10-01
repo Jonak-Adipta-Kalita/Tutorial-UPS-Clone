@@ -89,6 +89,11 @@
 			"marginLeft": 8
 		}
 	},
+	"-mt-2": {
+		"style": {
+			"marginTop": -8
+		}
+	},
 	"block": {
 		"style": {
 			"display": "block"

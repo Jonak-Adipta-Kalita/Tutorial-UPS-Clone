@@ -14,13 +14,13 @@ import useOrders from "../hooks/useOrders";
 import { Button, Image } from "@rneui/themed";
 import OrderCard from "../components/OrderCard";
 
-export type OrderScreenNavigationProp = CompositeNavigationProp<
+export type OrdersScreenNavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList, "Orders">,
   NativeStackNavigationProp<RootStackParamsList>
 >;
 
 const OrdersScreen = () => {
-  const navigation = useNavigation<OrderScreenNavigationProp>();
+  const navigation = useNavigation<OrdersScreenNavigationProp>();
   const tailwind = useTailwind();
   const { error, loading, orders } = useOrders();
   const [ascending, setAscending] = useState<boolean>(false);
